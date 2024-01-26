@@ -1,0 +1,6 @@
+package com.rishabhtech.rsapp.controller;
+
+@RestController
+public class ByController {
+
+}

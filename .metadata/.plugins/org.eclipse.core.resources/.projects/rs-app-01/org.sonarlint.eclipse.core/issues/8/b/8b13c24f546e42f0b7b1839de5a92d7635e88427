@@ -1,0 +1,7 @@
+
+¢
+java:S1128"gRemove this unused import 'org.springframework.security.authorization.AuthoritiesAuthorizationManager'.8üŸ«¨Ô1b 5038c11520b720fd473f12679bdf32a7h
+”
+java:S1128"YRemove this unused import 'org.springframework.security.provisioning.UserDetailsManager'.8ø³è¨Ô1b e4bd98020ad2755d1c35f4fef05def4fh
+v
+java:S1874'";Remove this use of "NoOpPasswordEncoder"; it is deprecated.8¹»ý¨Ô1b 2a38589299514aba2c2d53051a93b6c2h
