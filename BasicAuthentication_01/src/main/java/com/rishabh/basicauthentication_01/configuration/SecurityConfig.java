@@ -21,6 +21,8 @@ import javax.naming.NoPermissionException;
 @EnableWebSecurity // Annotation to enable Spring Security's web security support
 public class SecurityConfig {
 
+    // Commenting due to Our Custom MyAuthenticationProvider
+    /*
     // Method to configure your users and authentication type (InMemory, JDBC etc)
     @Bean // Annotation to indicate that a method produces a bean to be managed by the Spring container
     public UserDetailsService userDetailsService()
@@ -37,7 +39,7 @@ public class SecurityConfig {
         userDetailsManager.createUser(mohitUser); // Adding the user to the InMemoryUserDetailsManager
         return userDetailsManager; // Returning the configured InMemoryUserDetailsManager
     }
-
+    */
     // Method to create a SecurityFilterChain
     @Bean
     public SecurityFilterChain authenticationFilterChain(HttpSecurity http) throws Exception {
