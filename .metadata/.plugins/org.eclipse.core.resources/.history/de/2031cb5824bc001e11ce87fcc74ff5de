@@ -1,5 +1,0 @@
-package com.rishabhtech.rsapp.security.config;
-
-public class MySecurityConfig {
-
-}

@@ -1,7 +1,18 @@
 
-¢
-java:S1128"gRemove this unused import 'org.springframework.security.authorization.AuthoritiesAuthorizationManager'.8üŸ«¨Ô1b 5038c11520b720fd473f12679bdf32a7h
-”
-java:S1128"YRemove this unused import 'org.springframework.security.provisioning.UserDetailsManager'.8ø³è¨Ô1b e4bd98020ad2755d1c35f4fef05def4fh
+v	java:S125"<This block of commented-out lines of code should be removed.8ìºýÑÔ1b f95b70fdc3088560732a5ac135644506h
 v
-java:S1874'";Remove this use of "NoOpPasswordEncoder"; it is deprecated.8¹»ý¨Ô1b 2a38589299514aba2c2d53051a93b6c2h
+java:S1874*";Remove this use of "NoOpPasswordEncoder"; it is deprecated.8ò·ÏÒÔ1b 2a38589299514aba2c2d53051a93b6c2h
+v	java:S125<"<This block of commented-out lines of code should be removed.8ÞœñÒÔ1b 05c61f843302128715c3226718193061h
+k
+java:S1128"0Remove this unused import 'java.util.ArrayList'.8€ñ¬ÓÔ1b 510ef3bd202c030c041eba1094753b66h
+¢
+java:S1128"gRemove this unused import 'org.springframework.security.authorization.AuthoritiesAuthorizationManager'.8€ñ¬ÓÔ1b 5038c11520b720fd473f12679bdf32a7h
+Š
+java:S1128
+"ORemove this unused import 'org.springframework.security.core.GrantedAuthority'.8€ñ¬ÓÔ1b e4f9b2f18662b9fffdc3ebd43f5e9ebbh
+š
+java:S1128"_Remove this unused import 'org.springframework.security.core.authority.SimpleGrantedAuthority'.8€ñ¬ÓÔ1b ec9c387110deee479fc678d8d81d11e3h
+”
+java:S1128"YRemove this unused import 'org.springframework.security.provisioning.UserDetailsManager'.8€ñ¬ÓÔ1b e4bd98020ad2755d1c35f4fef05def4fh
+®
+java:S1128	"sRemove this unused import 'org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer'.8úñ®ÓÔ1b e8e70b6be205cc8e33a9bd3a32b9709fh
