@@ -45,8 +45,10 @@ public class SecurityConfig {
     public SecurityFilterChain authenticationFilterChain(HttpSecurity http) throws Exception {
         DefaultSecurityFilterChain dsfc = http
                 .formLogin(Customizer.withDefaults()) // Enabling HTTP Basic authentication
-                .authorizeHttpRequests(authorize -> authorize.anyRequest()
-                        .authenticated()) // All requests must be authenticated
+                .authorizeHttpRequests(requests -> requests
+                        .requestMatchers("/secured").denyAll()// All requests must be authenticated
+                        .requestMatchers("/hello").authenticated()
+                        .anyRequest().permitAll())
                 .build(); // Building the DefaultSecurityFilterChain
         return dsfc; // Returning the configured DefaultSecurityFilterChain
     }
