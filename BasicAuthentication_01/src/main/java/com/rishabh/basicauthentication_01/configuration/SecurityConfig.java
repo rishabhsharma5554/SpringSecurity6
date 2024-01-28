@@ -44,7 +44,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain authenticationFilterChain(HttpSecurity http) throws Exception {
         DefaultSecurityFilterChain dsfc = http
-                .httpBasic(Customizer.withDefaults()) // Enabling HTTP Basic authentication
+                .formLogin(Customizer.withDefaults()) // Enabling HTTP Basic authentication
                 .authorizeHttpRequests(authorize -> authorize.anyRequest()
                         .authenticated()) // All requests must be authenticated
                 .build(); // Building the DefaultSecurityFilterChain
