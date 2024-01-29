@@ -44,11 +44,9 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain authenticationFilterChain(HttpSecurity http) throws Exception {
         DefaultSecurityFilterChain dsfc = http
-                .formLogin(Customizer.withDefaults()) // Enabling HTTP Basic authentication
+                .formLogin(Customizer.withDefaults())
                 .authorizeHttpRequests(requests -> requests
-                        .requestMatchers("/secured").denyAll()// All requests must be authenticated
-                        .requestMatchers("/hello").authenticated()
-                        .anyRequest().permitAll())
+                        .requestMatchers("/hello").authenticated().anyRequest().denyAll()) // this will allow only /hello and deny all other request urls.
                 .build(); // Building the DefaultSecurityFilterChain
         return dsfc; // Returning the configured DefaultSecurityFilterChain
     }
