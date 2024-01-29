@@ -14,6 +14,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.DefaultSecurityFilterChain;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
 import javax.naming.NoPermissionException;
 
@@ -43,12 +44,12 @@ public class SecurityConfig {
     // Method to create a SecurityFilterChain
     @Bean
     public SecurityFilterChain authenticationFilterChain(HttpSecurity http) throws Exception {
-        DefaultSecurityFilterChain dsfc = http
-                .formLogin(Customizer.withDefaults())
-                .authorizeHttpRequests(requests -> requests
-                        .requestMatchers("/hello").authenticated().anyRequest().denyAll()) // this will allow only /hello and deny all other request urls.
+        return http
+                .httpBasic(Customizer.withDefaults())
+                .authorizeHttpRequests(requests -> requests.requestMatchers("/hello").authenticated()) // this will allow only /hello and deny all other request urls.
+                .addFilterBefore(new MyCustomFilter(), BasicAuthenticationFilter.class)
                 .build(); // Building the DefaultSecurityFilterChain
-        return dsfc; // Returning the configured DefaultSecurityFilterChain
+        // Returning the configured DefaultSecurityFilterChain
     }
 
     // Method to create a PasswordEncoder
